@@ -12,7 +12,7 @@
     "lint:styles": "npx stylelint **/*.scss",
     "preview": "vite preview",
     "test:unit": "vitest",
-    "prepare": "husky"
+    "prepare": "npx husky"
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
