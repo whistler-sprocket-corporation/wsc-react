@@ -24,6 +24,9 @@ jobs:
             - name: Lint
               run: npm run lint
 
+            - name: Lint Spelling
+              run: npm run lint:spelling
+
             - name: Lint Styles
               run: npm run lint:styles
 
