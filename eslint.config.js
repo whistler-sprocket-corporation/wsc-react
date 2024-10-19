@@ -6,17 +6,21 @@ import tseslint from "typescript-eslint";
 import prettier from "eslint-plugin-prettier/recommended";
 
 export default tseslint.config(
-  { ignores: ["dist", "./src/vite-env.d.ts"] },
+  { ignores: ["dist", "./src/vite-env.d.ts", "vitest.config.ts"] },
   {
     extends: [
       js.configs.recommended,
-      ...tseslint.configs.recommended,
+      ...tseslint.configs.strictTypeChecked,
       prettier,
     ],
     files: ["**/*.{ts,tsx}"],
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
+      parserOptions: {
+        projectService: true,
+        tsconfigRootDir: import.meta.dirname,
+      },
     },
     plugins: {
       "react-hooks": reactHooks,
