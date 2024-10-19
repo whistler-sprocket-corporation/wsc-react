@@ -1,4 +1,4 @@
-import { App } from "./App";
+import { App } from "./app.tsx";
 import { render, screen } from "@testing-library/react";
 
 describe("app", () => {
