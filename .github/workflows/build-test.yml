@@ -1,34 +1,34 @@
 name: Build & Test
 
 on:
-    push:
-    pull_request:
+  push:
+  pull_request:
 
 jobs:
-    unit:
-        name: Build & Unit Tests
-        runs-on: ubuntu-latest
+  unit:
+    name: Build & Unit Tests
+    runs-on: ubuntu-latest
 
-        steps:
-            - name: Checkout
-              uses: actions/checkout@v4
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
 
-            - name: Setup Node
-              uses: actions/setup-node@v4
-              with:
-                node-version: latest
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: latest
 
-            - name: Restore Dependencies
-              run: npm ci
+      - name: Restore Dependencies
+        run: npm ci
 
-            - name: Lint
-              run: npm run lint
+      - name: Lint
+        run: npm run lint
 
-            - name: Lint Spelling
-              run: npm run lint:spelling
+      - name: Lint Spelling
+        run: npm run lint:spelling
 
-            - name: Lint Styles
-              run: npm run lint:styles
+      - name: Lint Styles
+        run: npm run lint:styles
 
-            - name: Unit Tests
-              run: npm run test:unit
+      - name: Unit Tests
+        run: npm run test:unit
