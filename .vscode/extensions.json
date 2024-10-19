@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "redhat.vscode-yaml",
+    "eamodio.gitlens",
+    "me-dutour-mathieu.vscode-github-actions",
+    "github.vscode-github-actions"
+  ]
+}
