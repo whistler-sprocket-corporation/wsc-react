@@ -1,4 +1,3 @@
 {
-  "words": ["stylelint", "tseslint"],
-  "ignorePaths": ["./coverage/**"]
+  "words": ["stylelint", "tseslint"]
 }

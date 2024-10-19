@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint . --fix --max-warnings 0",
-    "lint:spelling": "npx cspell **",
+    "lint:spelling": "npx cspell ./src/**",
     "lint:styles": "npx stylelint **/*.scss",
     "preview": "vite preview",
     "test:unit": "vitest"
